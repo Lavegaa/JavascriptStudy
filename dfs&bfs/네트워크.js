@@ -12,7 +12,7 @@
 //방문 여부를 가지고 있는 배열(visited)를 두고 방문을 채크하며 dfs로 노드를 순회한다.
 
 function solution(n, computers) {
-  var answer = 0;
+  let answer = 0;
   let visited = [];
   for (let j = 0; j < n; j++) {
     visited.push(0);

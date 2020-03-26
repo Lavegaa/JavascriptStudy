@@ -5,30 +5,29 @@
 
 //내 풀이
 function solution(arr, divisor) {
-    let now = arr.filter((val)=>val%divisor==0)
-    if(now=='')now.push(-1);
+  let now = arr.filter(val => val % divisor == 0);
+  if (now == "") now.push(-1);
 
-    return now.sort((a,b)=>a-b);
+  return now.sort((a, b) => a - b);
 }
 
 //멋진 풀이
 function solution(arr, divisor) {
-    var answer = [];
-    arr.map((o) => {
-        o % divisor === 0 && answer.push(o);
-    })
+  let answer = [];
+  arr.map(o => {
+    o % divisor === 0 && answer.push(o);
+  });
 
-    return answer.length ? answer.sort((a, b) => a - b) : [-1];
+  return answer.length ? answer.sort((a, b) => a - b) : [-1];
 }
 
 //멋진 풀이2
 function solution(arr, divisor) {
-    var answer = [];
+  let answer = [];
 
-    for(var i = 0; i < arr.length; ++i) {
-        if(arr[i] % divisor == 0) answer.push(arr[i]);
-    }
+  for (let i = 0; i < arr.length; ++i) {
+    if (arr[i] % divisor == 0) answer.push(arr[i]);
+  }
 
-    return answer.length < 1 ? [-1] : answer.sort((a, b) => a - b);
+  return answer.length < 1 ? [-1] : answer.sort((a, b) => a - b);
 }
-

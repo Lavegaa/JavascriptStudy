@@ -8,52 +8,52 @@
 
 //내 풀이
 function solution(s) {
-    var answer = 0
-    let sub = s.substr(0)
-    let state = true
-    let num = 0.1
-    for(let i in sub){
-        num = num*10
+  let answer = 0;
+  let sub = s.substr(0);
+  let state = true;
+  let num = 0.1;
+  for (let i in sub) {
+    num = num * 10;
+  }
+  if (sub[0] == "-") {
+    num = num / 10;
+    state = false;
+    sub = s.substr(1);
+  } else if (sub[0] == "+") {
+    num = num / 10;
+    sub = s.substr(1);
+  }
+  for (let i in sub) {
+    if (!state) {
+      answer = answer - sub[i] * num;
+    } else {
+      answer = answer + sub[i] * num;
     }
-    if(sub[0]=='-'){
-        num = num/10
-        state = false
-        sub = s.substr(1)
-    }else if(sub[0]=='+'){
-        num = num/10
-        sub = s.substr(1)
-    }
-    for(let i in sub){
-        if(!state){
-            answer = answer-sub[i]*num
-        }else{
-            answer = answer+sub[i]*num
-        }
-        num = num/10
-    }
-    return answer;
+    num = num / 10;
+  }
+  return answer;
 }
 
 //멋진 풀이
 
-function strToInt(str){
-    return str/1
+function strToInt(str) {
+  return str / 1;
 }
 
 //도중에 콘솔에 '1'/2를 해서 0.5가 나왔으나 해당 방법은 생각해보지 못함....
 
 //멋진 풀이2
 
-function strToInt(str){
-    return  +str;
+function strToInt(str) {
+  return +str;
 }
 
 //int to string => ""+int
-//string to int => +string 
+//string to int => +string
 
 //멋진 풀이3
-function strToInt(str){
-  var result = 0;
+function strToInt(str) {
+  let result = 0;
   //함수를 완성하세요
   result = Number(str);
   return result;

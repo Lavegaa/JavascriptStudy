@@ -18,7 +18,7 @@
 //재귀를 통해 누적 값을 가지고 +하거나 -하는 분기로 dfs를 한다.
 
 function solution(numbers, target) {
-  var answer = 0;
+  let answer = 0;
 
   function dfs(index, sum) {
     if (index === numbers.length) {

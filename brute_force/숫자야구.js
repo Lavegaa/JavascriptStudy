@@ -10,7 +10,7 @@
 //123부터 987까지 0이 없고 중복되지 않은 값들 중에 baseball에서 주어진 값과 숫자야구 로직을 통해 비교한 후 스트라이크, 볼의 개수가 전부 맞는 지 확인.
 
 function solution(baseball) {
-  var answer = 0;
+  let answer = 0;
   let stack = 0;
   for (let i = 123; i <= 987; i++) {
     //const [x,y,z] = i.toString().split("").map(val=>Number(val));
