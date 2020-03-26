@@ -17,17 +17,17 @@ function solution(n, computers) {
   for (let j = 0; j < n; j++) {
     visited.push(0);
   }
-  function dfs(index) {
+  function bfs(index) {
     visited[index] = 1;
     computers[index].forEach((val, idx) => {
       if (val === 1 && visited[idx] === 0) {
-        dfs(idx);
+        bfs(idx);
       }
     });
   }
   visited.forEach((val, idx) => {
     if (val === 0) {
-      dfs(idx);
+      bfs(idx);
       answer += 1;
     }
   });
